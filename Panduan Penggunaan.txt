@@ -1,0 +1,29 @@
+**Admin**
+1. Buka website MakanKuy.
+2. Setelah login page muncul, masukkan username dan password lalu tekan login untuk masuk jika sudah memiliki 
+   akun. Jika belum memiliki akun, tekan register untuk memasukkan data dan buat password.
+3. Setelah login, akan masuk ke tabel restoran.
+4. Jika ingin menambahkan restoran, tekan tombol "Tambah Restoran". Lalu, masukkan data-data restoran.
+   Jika sudah selesai, tekan tombol "submit". Restoran yang baru ditambahkan akan terlihat di bagian paling
+   bawah tabel restoran.
+5. Untuk menambahkan menu restoran, tekan tombol berwarna biru di bagian paling kanan nama restoran yang
+   ingin ditambahkan menunya. Lalu, tekan tombol "Tambahkan Menu" dan masukkan data-data menu tersebut lalu
+   tekan tombol "submit". Ulangi langkah ini untuk menambahkan menu restoran hingga selesai.
+6. Jika ingin mengedit data menu, tekan tombol berwarna hijau dibagian paling kanan menu yang ingin diedit
+   dan pilih bagian mana yang ingin diedit. Lalu, tekan tombol "update" jika sudah selesai mengedit.
+7. Untuk menghapus menu, tekan tombol berwarna merah dibagian paling kanan menu yang ingin dihapus.
+
+**Customer**
+1. Buka website MakanKuy.
+2. Setelah login page muncul, masukkan username dan password lalu tekan login untuk masuk jika sudah memiliki 
+   akun. Jika belum memiliki akun, tekan register untuk memasukkan data.
+3. Jika sudah login, akan masuk ke landing page website MakanKuy.
+4. Untuk melihat restoran, tekan "Restoran" di bagian kanan atas dan pilih restoran mana yang ingin dipesan
+   makanannya.
+5. Setelah itu, akan muncul menu yang ada di restoran yang dipilih. Untuk memilih/ menambahkan jumlah menu
+   yang dipesan, tekan tombol "+" dan untuk mengurangi jumlah menu yang dipesan, tekan tombol "-". Akan terlihat
+   jumlah menu yang dipesan disamping tombol "-" masing-masing menu. Jika sudah selesai memesan, tekan tombol
+   "Pesan" dibagian tengah bawah.
+6. Untuk melihat pesanan apa saja yang dibuat, tekan "pesanan" dibagian kanan atas landing page dan akan
+   ditampilkan apa saja pesanan yang sudah dibuat beserta total harga yang harus dibayar. Jika sudah membayar,
+   tekan tombol "pesanan selesai" untuk menghapus pesanan yang sudah selesai.

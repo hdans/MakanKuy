@@ -1,0 +1,520 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+.navbar {
+    @apply fixed top-0 left-0 right-0 z-30 flex h-14 w-full border-b border-gray-200 bg-white transition-all duration-150;
+}
+
+@media (min-width: 1024px) {
+    .navbar {
+        @apply w-auto pl-60;
+    }
+}
+
+.navbar-brand {
+    @apply flex h-14 flex-1 items-stretch;
+}
+
+.navbar-brand.is-right {
+    @apply flex-none lg:hidden;
+}
+
+.navbar-brand .navbar-item {
+    @apply flex items-center;
+}
+
+.navbar-item,
+.navbar-link {
+    @apply block py-2 px-3;
+}
+
+.navbar-item {
+    @apply relative flex-shrink-0 flex-grow-0;
+}
+
+@media (min-width: 1024px) {
+    .navbar-item {
+        @apply flex items-center;
+    }
+    .navbar-item.mobile-aside-button {
+        @apply hidden;
+    }
+    .navbar-item.has-divider {
+        @apply border-r border-gray-200;
+    }
+}
+
+.navbar-item>.navbar-link {
+    @apply bg-gray-200;
+}
+
+@media (min-width: 1024px) {
+    .navbar-item>.navbar-link {
+        @apply bg-transparent;
+    }
+}
+
+.navbar-item .icon+span {
+    @apply ml-2;
+}
+
+.navbar-item.has-user-avatar>.navbar-link {
+    @apply flex items-center;
+}
+
+.navbar-item.has-user-avatar .user-avatar {
+    @apply mr-3 inline-flex h-6 w-6;
+}
+
+.navbar-item.dropdown {
+    @apply p-0;
+}
+
+@media (min-width: 1024px) {
+    .navbar-item.dropdown {
+        @apply p-2 px-3;
+    }
+}
+
+.navbar-item.dropdown>.navbar-link .icon:last-child {
+    @apply hidden lg:inline-flex;
+}
+
+.navbar-item .input {
+    @apply border-0;
+}
+
+.navbar-menu {
+    @apply max-h-[calc(100vh-3.5rem)] absolute top-14 left-0 hidden w-full overflow-auto border-b border-gray-200 bg-white shadow transition-shadow;
+}
+
+@media (min-width: 1024px) {
+    .navbar-menu {
+        @apply static flex-grow flex overflow-visible border-b-0 shadow-none;
+    }
+}
+
+.navbar-menu.active {
+    @apply block;
+}
+
+@media (min-width: 1024px) {
+    .navbar-end {
+        @apply ml-auto flex-end;
+    }
+}
+
+.navbar-item .navbar-dropdown {
+    @apply text-sm leading-5;
+}
+
+@media (min-width: 1024px) {
+    .navbar-item .navbar-dropdown {
+        @apply absolute top-full left-0 z-20 min-w-full rounded-b border-t-2 border-gray-200 bg-white shadow-md;
+    }
+    .navbar-item:not(.active) .navbar-dropdown {
+        @apply hidden;
+    }
+}
+
+.navbar-item.active.dropdown>.navbar-link,
+.navbar-item.active:not(.dropdown) {
+    @apply text-blue-500;
+}
+
+.field:not(:last-child) {
+    @apply mb-3;
+}
+
+.field.spaced:not(:last-child) {
+    @apply mb-6;
+}
+
+.field-body .field .field {
+    @apply mb-0;
+}
+
+.field.addons {
+    @apply flex;
+}
+
+.field.addons .control.expanded {
+    @apply flex-1;
+}
+
+.field.addons .control:first-child:not(:only-child) .input,
+.field.addons .control:first-child:not(:only-child) .select select {
+    @apply rounded-r-none border-r-0;
+}
+
+.field.addons .control:last-child:not(:only-child) .input,
+.field.addons .control:last-child:not(:only-child) .select select {
+    @apply rounded-l-none border-l-0;
+}
+
+.field.grouped {
+    @apply flex;
+}
+
+.field.grouped>.control:not(:last-child) {
+    @apply mr-3;
+}
+
+.field.grouped.multiline {
+    @apply flex-wrap;
+}
+
+.label {
+    @apply mb-2 block font-bold;
+}
+
+.control {
+    @apply relative;
+}
+
+.control.icons-left,
+.control.icons-right {
+    @apply relative;
+}
+
+.file-cta,
+.file-name,
+.input,
+.select select,
+.textarea {
+    @apply rounded border border-gray-400 px-3 py-2;
+}
+
+.file-cta,
+.file-name,
+.input,
+.select select {
+    @apply h-10;
+}
+
+.input,
+.select select,
+.textarea {
+    @apply w-full bg-white;
+}
+
+.input:focus,
+.select select:focus,
+.textarea:focus {
+    @apply border-gray-200 outline-none ring-2 ring-blue-500;
+}
+
+.input[readonly] {
+    @apply pointer-events-none bg-gray-200;
+}
+
+.textarea {
+    @apply h-24;
+}
+
+.control.icons-left .icon,
+.control.icons-right .icon {
+    @apply absolute top-0 z-10 h-10 w-10;
+}
+
+.control.icons-left .input,
+.control.icons-left .select select {
+    @apply pl-10;
+}
+
+.control.icons-left .icon.left {
+    @apply left-0;
+}
+
+.control.icons-right .input,
+.control.icons-right .select select {
+    @apply pr-10;
+}
+
+.control.icons-right .icon.right {
+    @apply right-0;
+}
+
+.help {
+    @apply mt-1 block text-xs text-gray-500;
+}
+
+.file {
+    @apply relative flex;
+}
+
+.upload {
+    @apply inline-flex;
+}
+
+.upload input[type=file] {
+    @apply absolute top-0 left-0 z-[-1] h-full w-full cursor-pointer opacity-0 outline-none;
+}
+
+.mx-auto {
+    @apply mx-auto;
+}
+
+.mb-6 {
+    @apply mb-6;
+}
+
+.block {
+    @apply block;
+}
+
+.flex {
+    @apply flex;
+}
+
+.table {
+    @apply table-auto w-full border-collapse;
+}
+
+.grid {
+    @apply grid;
+}
+
+.hidden {
+    @apply hidden;
+}
+
+.h-full {
+    @apply h-full;
+}
+
+.h-48 {
+    @apply h-48;
+}
+
+.h-8 {
+    @apply h-8;
+}
+
+.w-48 {
+    @apply w-48;
+}
+
+.w-auto {
+    @apply w-auto;
+}
+
+.grid-cols-1 {
+    @apply grid-cols-1;
+}
+
+.flex-col {
+    @apply flex-col;
+}
+
+.items-center {
+    @apply items-center;
+}
+
+.justify-start {
+    @apply justify-start;
+}
+
+.justify-between {
+    @apply justify-between;
+}
+
+.gap-6 {
+    @apply gap-6;
+}
+
+.space-y-3>:not([hidden])~:not([hidden]) {
+    @apply space-y-3;
+}
+
+.space-x-3>:not([hidden])~:not([hidden]) {
+    @apply space-x-3;
+}
+
+.space-y-6>:not([hidden])~:not([hidden]) {
+    @apply space-y-6;
+}
+
+.rounded-full {
+    @apply rounded-full;
+}
+
+.font-black {
+    @apply font-black;
+}
+
+.text-green-500 {
+    @apply text-green-500;
+}
+
+.text-blue-500 {
+    @apply text-blue-500;
+}
+
+.text-red-500 {
+    @apply text-red-500;
+}
+
+.text-gray-500 {
+    @apply text-gray-500;
+}
+
+body {
+    @apply bg-gray-50 pt-14 text-base leading-6;
+}
+
+@media (min-width: 1024px) {
+    body {
+        @apply pl-60;
+    }
+}
+
+#app {
+    @apply w-full transition-all duration-150;
+}
+
+@media (min-width: 1024px) {
+    #app {
+        @apply w-auto;
+    }
+}
+
+.main-section {
+    @apply p-6;
+}
+
+.dropdown {
+    @apply cursor-pointer;
+}
+
+.clipped,
+.clipped body {
+    @apply overflow-hidden;
+}
+
+.m-clipped,
+.m-clipped body {
+    @apply overflow-hidden;
+}
+
+@media (min-width: 1024px) {
+    .m-clipped,
+    .m-clipped body {
+        @apply overflow-visible;
+    }
+}
+
+.form-screen body {
+    @apply p-0;
+}
+
+.form-screen .main-section {
+    @apply flex h-screen items-center justify-center;
+}
+
+.aside {
+    @apply fixed left-[-15rem] top-0 z-40 h-full w-60 bg-gray-800 transition-all duration-150;
+}
+
+@media (min-width: 1024px) {
+    .aside {
+        @apply left-0;
+    }
+}
+
+.aside-tools {
+    @apply flex h-14 w-full flex-1 flex-row items-center bg-gray-900 px-3 text-white;
+}
+
+.aside-mobile-expanded .aside {
+    @apply left-0;
+}
+
+.aside-mobile-expanded .navbar {
+    @apply ml-60;
+}
+
+.aside-mobile-expanded #app {
+    @apply ml-60;
+}
+
+.aside-mobile-expanded,
+.aside-mobile-expanded body {
+    @apply overflow-hidden;
+}
+
+@media (min-width: 1024px) {
+    .aside-mobile-expanded,
+    .aside-mobile-expanded body {
+        @apply overflow-visible;
+    }
+}
+
+.menu-label {
+    @apply text-gray-400;
+}
+
+.menu-list li {
+    @apply rounded text-sm text-gray-300;
+}
+
+.menu-list li>a {
+    @apply py-2 px-3 block text-white transition-all duration-150;
+}
+
+.menu-list li>a:hover {
+    @apply bg-gray-700;
+}
+
+.menu-list li.active>a,
+.menu-list li.active>a:hover {
+    @apply bg-gray-700 text-white;
+}
+
+.menu-list li .sub-menu {
+    @apply hidden;
+}
+
+.menu-list li.active .sub-menu {
+    @apply flex;
+}
+
+.menu-list li .sub-menu li>a {
+    @apply py-1 px-5 block text-white;
+}
+
+.menu-list li .sub-menu li.active>a {
+    @apply bg-gray-700;
+}
+
+@media (min-width: 1024px) {
+    .menu-list li .sub-menu {
+        @apply flex-grow pl-4;
+    }
+    .menu-list li .sub-menu li>a {
+        @apply text-sm;
+    }
+}
+
+.active>a {
+    @apply bg-gray-700 text-white;
+}
+
+.navbar-green {
+    @apply bg-green-500;
+}
+
+/* Additional CSS to remove margins/paddings around table */
+.table-container {
+    @apply p-0 m-0;
+}
+
+.table {
+    @apply m-0;
+}
+
+.table th, .table td {
+    @apply p-0;
+}
